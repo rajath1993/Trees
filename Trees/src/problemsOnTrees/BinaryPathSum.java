@@ -50,7 +50,7 @@ public class BinaryPathSum {
 		return false;
 	}
 	
-	/*recursive solution*/
+	/*recursive solution to tree path sum*/
 	static boolean findPathSumRecurr(Node root,int sum) {
 		if(root==null) return false;
 		
