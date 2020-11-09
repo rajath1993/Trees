@@ -57,7 +57,7 @@ public class BinaryPathSum {
 		/*return true if incoming sum==value of node and we have reached the end point of the tree*/
 		if(root.val==sum && root.left==null && root.right == null) return true;
 		
-		/**/
+		/*recursively iterate left and right childs and check for the sum*/
 		return findPathSumRecurr(root.left,sum-root.val) || findPathSumRecurr(root.right,sum-root.val);
 	}
 }
