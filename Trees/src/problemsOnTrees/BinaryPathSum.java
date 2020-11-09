@@ -12,8 +12,8 @@ public class BinaryPathSum {
 	    root.right.left = new Node(10);
 	    root.right.right = new Node(5);
 	    
-	    int sum = 23;
-	    boolean res = findPathSum(root,sum);
+	    int sum = 21;
+	    boolean res = findPathSumRecurr(root,sum);
 	    System.out.println(res);
 	    
 	}
@@ -48,5 +48,16 @@ public class BinaryPathSum {
 		}
 		
 		return false;
+	}
+	
+	/*recursive solution to tree path sum*/
+	static boolean findPathSumRecurr(Node root,int sum) {
+		if(root==null) return false;
+		
+		/*return true if incoming sum==value of node and we have reached the end point of the tree*/
+		if(root.val==sum && root.left==null && root.right == null) return true;
+		
+		/**/
+		return findPathSumRecurr(root.left,sum-root.val) || findPathSumRecurr(root.right,sum-root.val);
 	}
 }
