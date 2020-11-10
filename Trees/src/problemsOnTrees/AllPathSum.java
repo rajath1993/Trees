@@ -29,7 +29,7 @@ public class AllPathSum {
 		
 		return result;
 	}
-	
+	/*helper function recursively finds the path which adds up to the sum, adds the path to the resultant list*/
 	public static void helper(Node root,int sum,List<Integer> current,List<List<Integer>> result) {
 		if(root == null) return;
 		
@@ -47,7 +47,6 @@ public class AllPathSum {
 	 * 			1
 	 * 		7		9
 	 * 	  4   5	  2   7
-	 * 
 	 * 
 	 * res [[1,7,4],]
 	 * */
